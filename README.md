@@ -1,4 +1,5 @@
 # Project Stack Rate - PSR 
+## Integrantes do Trabalho  :  Antonio Pierre , Gustavo Zille , Marcos Junio , Samuel Santos e Vinicius França
 
 Site de rede social e ranqueamento de animes.
 

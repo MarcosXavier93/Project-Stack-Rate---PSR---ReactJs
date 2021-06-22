@@ -44,4 +44,4 @@ O proposto trabalho tem a ideia de criar um web site para que seja possível rea
 ### Link Para Telas do Figma
 O Prototipo das telas do projeto foi desenvolvido pelo aplicativo Figma.
 Visualize as telas pelo linka  seguir: 
-[Flex Grid] (https://www.figma.com/file/LIhumGTUAtEy9IZwX5T3KH/Prototipo?node-id=0%3A1)
+[Flex Grid](https://www.figma.com/file/LIhumGTUAtEy9IZwX5T3KH/Prototipo?node-id=0%3A1)

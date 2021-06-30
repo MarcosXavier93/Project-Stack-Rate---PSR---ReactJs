@@ -1,3 +1,14 @@
+/* Cores Determinadas na Primeira Etapa - Figma*/
+
+:root {
+  --cor-cinza1 : #2E2E33;
+  --cor-cinza2 : #35353B ;
+  --cor-cinza3 : #2A2A2E;
+  --cor-cinza_claro : #6F6F7A;
+  --cor-cinza_Claro2 : #A9A9bA;
+
+}
+
 .App {
   text-align: center;
 }

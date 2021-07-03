@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import MainContent from "./MainContent";
 import { Component } from "react";
 import Footer from "./Footer";
+import SideBar from "./SideBar";
 
 function Home() {
   const [animeLista, SetAnimeLista] = useState([]);
@@ -58,6 +59,7 @@ function Home() {
   return (
     <div className="Anime">
       <Header />
+      <SideBar />
       <div className="content-wrap">
         <MainContent
           HandleSearch={HandleSearch}
@@ -69,6 +71,7 @@ function Home() {
         />
       </div>
       <Footer />
+      <script type="text/javascript" src="js/bubbles.js"></script>
     </div>
   );
 }

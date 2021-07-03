@@ -15,14 +15,17 @@
   font-family: "Fira Sans", sans-serif;
   background-color: #2a2a2e;
 }
+
+h3 {
+  color: #6f6f7a;
+}
 header {
   color: #aaa;
-
   padding: 0 1em;
   display: block;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.95);
+
   padding-top: 1em;
   text-align: center;
 }
@@ -30,25 +33,52 @@ header ul {
   list-style-type: none;
 }
 nav {
-  margin-bottom: 0;
+  width: 40%;
+  margin: auto;
+}
+li a {
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
 }
 nav li {
   margin-bottom: 0;
   display: inline-block;
-  margin: 1%;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 2%;
 }
-main h1 {
-  text-align: center;
+.main-head {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8%;
+}
+ul {
+  list-style-type: none;
+  overflow: hidden;
 }
 
+li a:hover {
+  background-color: #111;
+}
+input {
+  color: #fff;
+  margin-top: 1%;
+  display: block;
+  width: 80%;
+  height: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .content-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .main-head input {
-  align: center;
+  text-align: center;
 }
 .content-wrap aside {
   -webkit-box-flex: 1;
@@ -120,9 +150,14 @@ main h1 {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 .content-wrap main .main-head .search-box input ::-webkit-input-placeholder {
   color: #888;
-  align: center;
+  text-align: center;
 }
 .content-wrap main .main-head .search-box input :-ms-input-placeholder {
   color: #888;
@@ -181,4 +216,7 @@ main h1 {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+}
+.anime-card {
+  color: #6f6f7a;
 }

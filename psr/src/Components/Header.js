@@ -5,10 +5,10 @@ function Header() {
       <nav id="menu-principal">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="#">Login</a>
           </li>
           <li>
-            <a href="#"></a>
+            <a href="#">Cadastrar</a>
           </li>
           <li>
             <a href="#">Perfil</a>

@@ -13,30 +13,42 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
+  background-color: #2a2a2e;
 }
 header {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  color: #aaa;
+
+  padding: 0 1em;
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding-top: 1em;
+  text-align: center;
+}
+header ul {
+  list-style-type: none;
+}
+nav {
+  margin-bottom: 0;
+}
+nav li {
+  margin-bottom: 0;
+  display: inline-block;
+  margin: 1%;
+  padding-left: 2%;
 }
 main h1 {
   text-align: center;
-  border: #313131;
-  border-color: #313131;
-  border-style: solid;
 }
-header h1 {
-  color: #a9a9ba;
-  font-size: 36px;
-  font-weight: 400;
-  text-align: center;
-}
-header h1 strong {
-  color: #313131;
-}
+
 .content-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.main-head input {
+  align: center;
 }
 .content-wrap aside {
   -webkit-box-flex: 1;
@@ -49,11 +61,7 @@ header h1 strong {
   padding-left: 16px;
   padding-right: 16px;
 }
-.content-wrap aside nav h3 {
-  color: #313131;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
+
 .content-wrap aside nav a {
   display: block;
   padding: 8px 16px;
@@ -114,6 +122,7 @@ header h1 strong {
 }
 .content-wrap main .main-head .search-box input ::-webkit-input-placeholder {
   color: #888;
+  align: center;
 }
 .content-wrap main .main-head .search-box input :-ms-input-placeholder {
   color: #888;
@@ -144,6 +153,7 @@ header h1 strong {
   flex: 1 1 33.333%;
   max-width: fit-content;
   padding: 5px 8px;
+  color: #a9a9ba;
 }
 .content-wrap main .anime-list .anime-card a {
   text-decoration: none;
@@ -152,6 +162,7 @@ header h1 strong {
   display: block;
   margin-bottom: 16px;
 }
+
 .content-wrap main .anime-list .anime-card figure img {
   display: block;
   width: 100%;
@@ -164,9 +175,7 @@ header h1 strong {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-.content-wrap main .anime-list .anime-card h3 {
-  color: #313131;
-}
+
 .content-wrap main .anime-list .anime-card:hover figure img {
   -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);

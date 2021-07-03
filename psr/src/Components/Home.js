@@ -3,6 +3,7 @@ import Header from "./Header";
 import { useState, useEffect } from "react";
 import MainContent from "./MainContent";
 import { Component } from "react";
+import Footer from "./Footer";
 
 function Home() {
   const [animeLista, SetAnimeLista] = useState([]);
@@ -67,6 +68,7 @@ function Home() {
           animeListaNovos={animeListaNovos}
         />
       </div>
+      <Footer />
     </div>
   );
 }

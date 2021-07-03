@@ -216,3 +216,13 @@ input {
 .anime-card {
   color: #6f6f7a;
 }
+footer {
+  padding: 1em;
+  color: #a9a9ba;
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer .logo-rodape {
+  margin-right: 2em;
+}

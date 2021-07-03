@@ -6,15 +6,32 @@ import { Component } from "react";
 
 function Home() {
   const [animeLista, SetAnimeLista] = useState([]);
+  const [animeListaNovos, SetAnimeListaNovos] = useState([]);
+  const [animeListaDestaque, SetAnimeListaDestaque] = useState([]);
   const [topAnime, SetTopAnime] = useState([]);
   const [search, SetSearch] = useState("");
 
   const GetTodosAnimes = async () => {
     const temporario = await fetch(
-      `https://api.jikan.moe/v3/top/anime/1/bypopularity`
+      `https://api.jikan.moe/v3/top/anime/50/bypopularity`
     ).then((response) => response.json());
     SetAnimeLista(temporario.results);
   };
+
+  const GetTodosAnimesDestaque = async () => {
+    const temporario = await fetch(
+      `https://api.jikan.moe/v3/top/anime/50/airing`
+    ).then((response) => response.json());
+    SetAnimeListaDestaque(temporario.results);
+  };
+
+  const GetTodosAnimesNovos = async () => {
+    const temporario = await fetch(
+      `https://api.jikan.moe/v3/top/anime/50/upcoming`
+    ).then((response) => response.json());
+    SetAnimeListaNovos(temporario.results);
+  };
+
   /*
   const GetTopAnime = async()=>{
     const temporario = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`).then(response=>response.json());
@@ -46,6 +63,8 @@ function Home() {
           search={search}
           SetSearch={SetSearch}
           animeLista={animeLista}
+          animeListaDestaque={animeListaDestaque}
+          animeListaNovos={animeListaNovos}
         />
       </div>
     </div>

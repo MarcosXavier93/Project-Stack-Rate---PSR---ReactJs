@@ -10,13 +10,13 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Fira Sans", sans-serif;
   background-color: #2a2a2e;
 }
 
-h3 {
+h3,
+h2 {
   color: #6f6f7a;
 }
 header {
@@ -174,10 +174,7 @@ input {
   color: #fff;
 }
 .content-wrap main .anime-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top: 32px;
   margin: 32px -8px 0px;
@@ -215,7 +212,6 @@ input {
   -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   -webkit-transform: scale(1.05);
-  transform: scale(1.05);
 }
 .anime-card {
   color: #6f6f7a;

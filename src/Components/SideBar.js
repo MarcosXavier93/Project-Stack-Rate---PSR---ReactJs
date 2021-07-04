@@ -18,7 +18,7 @@ function SideBar() {
         <span>☰</span>
       </span>
 
-      <script src="./Menu.js"></script>
+      <script src="Menu.js"></script>
     </aside>
   );
 }

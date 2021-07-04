@@ -1,7 +1,7 @@
 # Project Stack Rate - PSR 
 ## Integrantes do Trabalho:
 - [Gustavo Zille](https://github.com/guszille)
-- [Marcos Junio](https://github.com/MarcosXavier93)
+- [Marcus Junio](https://github.com/MarcosXavier93)
 - [Pierre Vieira](https://github.com/PierreVieira)
 - [Samuel Santos](https://github.com/Samuel1s)
 - [Vinicius França](https://github.com/viniciusfdev)

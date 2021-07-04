@@ -1,7 +1,10 @@
 function Header() {
   return (
     <header>
-      <h3>Project Stack Rate - PSR</h3>
+      <figure>
+        <img src="psr\src\images\PSR.png" alt="" />
+      </figure>
+
       <nav id="menu-principal">
         <ul>
           <li>

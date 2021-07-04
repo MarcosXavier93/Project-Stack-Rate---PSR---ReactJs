@@ -29,6 +29,8 @@ function MainContent(props, { animeListaNovidades }) {
           <AnimeCard anime={anime} key={anime.mal_id} />
         ))}
       </div>
+
+      <script src="MainContentCheck.js"></script>
     </main>
   );
 }

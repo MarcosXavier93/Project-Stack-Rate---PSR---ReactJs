@@ -1,9 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import ProfileList from './profile_list_screen/profilelist'
+import React from "react";
+import ReactDOM from "react-dom";
+import Profile from "./profile/profile";
 
 const Main = () => {
-  return <ProfileList />
-}
+  return <Profile />;
+};
 
-ReactDOM.render(Main(), document.getElementById('root'))
+ReactDOM.render(Main(), document.getElementById("root"));

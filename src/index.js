@@ -1,14 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import Home from "./Components/Home";
+import ReactDOM from 'react-dom'
+import Anime from './detail_screen/anime'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
-reportWebVitals();
+const Main = () => {
+  return <Anime />
+}
+
+ReactDOM.render(Main(), document.getElementById('root'))

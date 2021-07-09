@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import Anime from './detail_screen/anime'
+import ProfileList from "./profile_list_screen/profilelist";
 
 const Main = () => {
-  return <Anime />
+  return <ProfileList />
 }
 
 ReactDOM.render(Main(), document.getElementById('root'))

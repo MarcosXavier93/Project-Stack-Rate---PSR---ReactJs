@@ -10,7 +10,7 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
   min-height: 100vh;
   background-color: var(--grey-4);
 }
@@ -20,7 +20,7 @@ body {
 header {
   height: 64px;
   background-color: var(--grey-2);
-  box-shadow: 0px 2px 4px 3px var(--grey-5);
+  box-shadow: 0 2px 4px 3px var(--grey-5);
 }
 
 header > div {
@@ -38,7 +38,7 @@ main {
   min-height: calc(100vh - 64px);
 
   display: flex;
-  padding: 16px 0px;
+  padding: 16px 0;
   box-sizing: border-box;
   justify-content: space-between;
   gap: 16px;
@@ -62,11 +62,11 @@ main > section:first-child {
 }
 
 #title h1 {
-  font-family: 'Roboto';
+  font-family: 'Roboto', serif;
   font-weight: 100;
   font-size: 32px;
   color: white;
-  margin: 0px;
+  margin: 0;
 }
 
 #title span {
@@ -75,7 +75,7 @@ main > section:first-child {
 
 #main-image {
   width: inherit;
-  margin: 32px 0px;
+  margin: 32px 0;
   border-radius: 16px;
 }
 
@@ -83,7 +83,7 @@ main > section:first-child p {
   color: white;
   font-size: 18px;
   font-weight: 300;
-  font-family: 'Roboto';
+  font-family: 'Roboto', serif;
   background-color: var(--grey-4);
 
   padding: 8px 16px;
@@ -99,11 +99,11 @@ main > section:last-child {
 }
 
 h2 {
-  margin: 0px;
+  margin: 0;
   color: white;
   font-size: 24px;
   font-weight: 300;
-  font-family: 'Roboto';
+  font-family: 'Roboto', serif;
 }
 
 #rating {
@@ -118,16 +118,16 @@ h2 {
 }
 
 #rating h2 {
-  margin: 0px 0px 24px 0px;
+  margin: 0 0 24px 0;
 }
 
 #rating p {
-  margin: 0px;
+  margin: 0;
   color: white;
   line-height: 1;
   font-size: 40px;
   font-weight: 100;
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', serif;
 }
 
 #rating p span {
@@ -145,16 +145,16 @@ h2 {
 }
 
 #description h2 {
-  margin: 0px 0px 24px 0px;
+  margin: 0 0 24px 0;
 }
 
 #description p {
-  margin: 0px;
+  margin: 0;
   color: white;
   font-size: 14px;
   font-weight: 100;
   text-align: justify;
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', serif;
 }
 
 iframe {
@@ -194,16 +194,15 @@ iframe {
   padding: 16px 24px;
   border-radius: 10px;
   background-color: var(--grey-3);
-  box-shadow: 0px 1px 1px var(--grey-5);
+  box-shadow: 0 1px 1px var(--grey-5);
 }
 
 label {
-  padding: 4px;
   color: white;
   font-size: 14px;
   font-weight: 300;
-  font-family: 'Roboto';
-  display: inline-block;
+  font-family: 'Roboto', serif;
+  display: block;
 }
 
 select {
@@ -211,10 +210,12 @@ select {
   display: block;
   font-size: 18px;
   font-weight: 400;
-  font-family: 'Roboto';
+  font-family: 'Roboto', serif;
   padding: 8px 4px;
   border-radius: 5px;
   background-color: var(--grey-1);
+
+  margin-top: 4px;
 }
 
 .dialog select {
@@ -252,7 +253,7 @@ select {
   color: white;
   font-size: 15px;
   font-weight: 300;
-  font-family: 'Roboto';
+  font-family: 'Roboto', serif;
   cursor: pointer;
 }
 

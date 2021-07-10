@@ -52,18 +52,18 @@ h2 {
   color: purple;
 }
 
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
 .next {
-  right: -50px;
+  right: -5%;
   top: 50%;
   font-size: xx-large;
   color: white;
 }
-::-webkit-scrollbar {
-  display: none;
-  width: 0px;
-}
 .prev {
-  left: -50px;
+  left: -5%;
   size: 50px;
 
   top: 50%;

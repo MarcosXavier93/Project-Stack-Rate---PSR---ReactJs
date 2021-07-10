@@ -1,10 +1,8 @@
-import "../Style/App.css";
-import Header from "./Header";
+import "../Style/HomeStyle.css";
 import { useState, useEffect } from "react";
-import MainContent from "./MainContent";
+import SearchContainer from "./SearchContainer";
 import { Component } from "react";
-import Footer from "./Footer";
-import SideBar from "./SideBar";
+import Row from "./Row";
 
 function Home() {
   const [animeLista, SetAnimeLista] = useState([]);
@@ -20,20 +18,6 @@ function Home() {
     SetAnimeListaNovidades(ResutltadoJson.top);
   };
 
-  const GetTodosAnimesNovos = async () => {
-    const ResutltadoJson = await fetch(
-      `https://api.jikan.moe/v3/schedule/monday`
-    ).then((response) => response.json());
-    SetAnimeListaNovos(ResutltadoJson.results);
-  };
-
-  const GetTopAnime = async () => {
-    const temporario = await fetch(
-      `https://api.jikan.moe/v3/top/anime/1/bypopularity`
-    ).then((response) => response.json());
-    SetTopAnime(temporario.top.slice(0, 5));
-  };
-
   const HandleSearch = (e) => {
     e.preventDefault();
     FetchAnime(search);
@@ -47,23 +31,22 @@ function Home() {
 
   useEffect(() => {
     GetanimeListaNovidades();
-    console.log("Anime Novidades");
   }, []);
+
   return (
     <div className="Anime">
-      <Header />
-      <SideBar />
       <div className="content-wrap">
-        <MainContent
+        <SearchContainer
           HandleSearch={HandleSearch}
           search={search}
           SetSearch={SetSearch}
           animeLista={animeLista}
-          animeListaNovidades={animeListaNovidades}
-          animeListaNovos={animeListaNovos}
         />
+        <Row title="News" animeListaNovidades={animeListaNovidades} />
+        <Row title="World Top" animeListaNovidades={animeListaNovidades} />
+        <Row title="Recomendations" animeListaNovidades={animeListaNovidades} />
+        <Row title="Wacthing now" animeListaNovidades={animeListaNovidades} />
       </div>
-      <Footer />
     </div>
   );
 }

@@ -8,8 +8,14 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-elastic-carousel": "^0.11.5",
+    "react-horizontal-scrolling-menu": "^0.7.10",
+    "react-icons": "^4.2.0",
     "react-responsive-carousel": "^3.2.19",
     "react-scripts": "4.0.3",
+    "react-scroll-horizontal": "^1.6.6",
+    "react-slick": "^0.28.1",
+    "react-slick-carousel": "^0.14.9",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

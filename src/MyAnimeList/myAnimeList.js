@@ -3,7 +3,7 @@ import React from 'react'
 import {useState, useEffect } from 'react'
 
 // CSS.
-import './profilelist.css'
+import './myAnimeList.css'
 
 const initialState = {
   user : {

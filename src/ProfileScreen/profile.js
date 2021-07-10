@@ -4,26 +4,6 @@ import "./profile.css";
 import { uploadImage } from "./utils";
 import RingLoader from "react-spinners/RingLoader";
 
-function Header() {
-  return (
-    <header className="header">
-      <nav>
-        <ul>
-          <li>
-            <a href="/#">home</a>
-          </li>
-          <li>
-            <a href="/#">about</a>
-          </li>
-          <li>
-            <a href="/#">profile</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  );
-}
-
 function Card(props) {
   return (
     <div className="card" {...props}>
@@ -388,12 +368,9 @@ export default function Profile() {
   };
 
   return (
-    <>
-      <Header />
-      <main className="main-profile">
-        <ProfileAppear user={user} />
-        <ProfileFooter user={user} />
-      </main>
-    </>
+    <main className="main-profile">
+      <ProfileAppear user={user} />
+      <ProfileFooter user={user} />
+    </main>
   );
 }

@@ -1,9 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Profile from "./profile/profile";
+import Router from "./router";
 
-const Main = () => {
-  return <Profile />;
-};
-
-ReactDOM.render(Main(), document.getElementById("root"));
+ReactDOM.render(<Router />, document.getElementById("root"));

@@ -1,6 +1,8 @@
-function Header() {
+import { Link } from "react-router-dom";
+
+export function Header() {
   return (
-    <header>
+    <header className="header">
       <figure>
         <img src="psr\src\images\PSR.png" alt="" />
       </figure>
@@ -8,13 +10,13 @@ function Header() {
       <nav id="menu-principal">
         <ul>
           <li>
-            <a href="#">Login</a>
+            <Link to="/">home</Link>
           </li>
           <li>
-            <a href="#">Cadastrar</a>
+            <Link to="/profile">profile</Link>
           </li>
           <li>
-            <a href="#">Perfil</a>
+            <Link to="/my-anime-list">my anime list</Link>
           </li>
         </ul>
       </nav>

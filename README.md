@@ -1,11 +1,25 @@
-# Project Stack Rate - PSR 
-## Integrantes do Trabalho:  Antônio Pierre, Gustavo Zille, Marcos Junio, Samuel Santos e Vinicius França
+# Project Stack Rate - PSR
+
+<div align="center">
+    <img width="400" src="https://user-images.githubusercontent.com/49538805/124393487-27445f80-dcd1-11eb-9cd6-903d9478085c.png">
+</div>
+
+## Integrantes do Trabalho:
+- [Gustavo Zille](https://github.com/guszille)
+- [Marcos Junio](https://github.com/MarcosXavier93)
+- [Pierre Vieira](https://github.com/PierreVieira)
+- [Samuel Santos](https://github.com/Samuel1s)
+- [Vinicius França](https://github.com/viniciusfdev)
 
 Site de rede social e ranqueamento de animes.
 
 ## Descrição do projeto
 
 O proposto trabalho tem a ideia de criar um web site para que seja possível realizar o ranqueamento e visualização de todos os animes disponíveis permitindo que os usuários logados possam interagir com a comunidade: fazendo comentários, dando reviews (estrelas), notas ou criando uma thread de discussão sobre um determinado assunto.
+
+### Configurações do Projeto
+- Estamos utilizando Kanban como metodologia de desenvolvimento de software, consulte a planilha clicando [aqui](https://github.com/MarcosXavier93/Project-Stack-Rate---PSR---ReactJs/projects/1);
+- Todo Pull Request para a branch main precisa de um reviewer, caso contrário o PR não será aprovado.
 
 ## Tópicos opcionais que serão abordados
 
@@ -43,5 +57,5 @@ O proposto trabalho tem a ideia de criar um web site para que seja possível rea
 
 
 ### Link Para Telas do Figma
-O Prototipo das telas do projeto foi desenvolvido pelo aplicativo Figma.
+O Protótipo das telas do projeto foi desenvolvido pelo aplicativo Figma.
 Visualize as telas pelo linka  seguir: [Visualizacao do Prototipo no Figma](https://www.figma.com/file/LIhumGTUAtEy9IZwX5T3KH/Prototipo?node-id=0%3A1).

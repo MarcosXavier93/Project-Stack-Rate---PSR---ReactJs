@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+  --grey-1: #A9A9BA;
+  --grey-2: #6F6F7A;
+  --grey-3: #35353B;
+  --grey-4: #2E2E33;
+  --grey-5: #2A2A2E;
+  --purple: #9572F8;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--grey-4);
+}
+
+/* --- Header --- */
+
+header {
+  height: 64px;
+  background-color: var(--grey-2);
+  box-shadow: 0 2px 4px 3px var(--grey-5);
+}
+
+header > div {
+  margin: auto;
+  height: 64px;
+  max-width: 1280px;
+  background-color: var(--grey-1);
+}
+
+/* --- Main --- */
+
+main {
+  margin: auto;
+  max-width: 1280px;
+  min-height: calc(100vh - 64px);
+
+  display: flex;
+  padding: 16px 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.paper {
+  padding: 16px 24px;
+  border-radius: 10px;
+  background-color: var(--grey-3);
+  box-shadow: 2px 2px 4px 3px var(--grey-5);
+}
+
+main > section:first-child {
+  width: 300px;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#title h1 {
+  font-family: 'Roboto', serif;
+  font-weight: 100;
+  font-size: 32px;
+  color: white;
+  margin: 0;
+}
+
+#title span {
+  color: white;
+}
+
+#main-image {
+  width: inherit;
+  margin: 32px 0;
+  border-radius: 16px;
+}
+
+main > section:first-child p {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Roboto', serif;
+  background-color: var(--grey-4);
+
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+main > section:last-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+h2 {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: 'Roboto', serif;
+}
+
+#rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+#rating .divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--grey-2);
+}
+
+#rating h2 {
+  margin: 0 0 24px 0;
+}
+
+#rating p {
+  margin: 0;
+  color: white;
+  line-height: 1;
+  font-size: 40px;
+  font-weight: 100;
+  font-family: 'Quicksand', serif;
+}
+
+#rating p span {
+  font-size: 24px;
+  color: var(--purple);
+  margin-left: 32px;
+}
+
+#rating div:last-child span {
+  color: white;
+}
+
+#description {
+  flex: 1;
+}
+
+#description h2 {
+  margin: 0 0 24px 0;
+}
+
+#description p {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  text-align: justify;
+  font-family: 'Quicksand', serif;
+}
+
+iframe {
+  height: 320px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 2px 1px var(--grey-5);
+}
+
+/* --- Dialog --- */
+
+.overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: ease-in-out 200ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dialog {
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+
+  width: 400px;
+  padding: 16px 24px;
+  border-radius: 10px;
+  background-color: var(--grey-3);
+  box-shadow: 0 1px 1px var(--grey-5);
+}
+
+label {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: 'Roboto', serif;
+  display: block;
+}
+
+select {
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Roboto', serif;
+  padding: 8px 4px;
+  border-radius: 5px;
+  background-color: var(--grey-1);
+
+  margin-top: 4px;
+}
+
+.dialog select {
+  margin-bottom: 24px;
+}
+
+/* --- Custom Components --- */
+
+.icon-button {
+  padding: 5px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: transparent;
+  transition: background 200ms;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon-button:active {
+  background-size: 100%;
+  transition: background 100ms;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.text-button {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border-color: transparent;
+  background-color: transparent;
+  transition: background 200ms;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Roboto', serif;
+  cursor: pointer;
+}
+
+.text-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text-button:active {
+  background-size: 100%;
+  transition: background 100ms;
+  background-color: rgba(0, 0, 0, 0.25);
+}

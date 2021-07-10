@@ -1,10 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Home from "./HomeScreen/Components/Home";
+import React from 'react';
+import ReactDOM from 'react-dom'
+import Anime from './detail_screen/anime'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+const Main = () => {
+  return <Anime />
+}
+
+ReactDOM.render(Main(), document.getElementById('root'))

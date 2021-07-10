@@ -23,7 +23,7 @@ function Row(props, { title }) {
     speed: 100,
     slidesToShow: 4,
     centerMode: true,
-    centerPadding: 50,
+    centerPadding: 0,
     slidesToSlide: 8,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,

@@ -6,7 +6,7 @@ import RingLoader from "react-spinners/RingLoader";
 
 function Card(props) {
   return (
-    <div className="card" {...props}>
+    <div className="profile-card" {...props}>
       {props && props.children}
     </div>
   );
@@ -14,9 +14,12 @@ function Card(props) {
 
 function Button({ text, onClick, icon, style }) {
   return (
-    <button className="button" onClick={onClick} style={style}>
+    <button className="profile-button" onClick={onClick} style={style}>
       {icon && (
-        <span style={{ marginRight: icon ? 8 : 0 }} className="material-icons">
+        <span
+          style={{ marginRight: icon ? 8 : 0 }}
+          className="material-icons"
+        >
           {icon}
         </span>
       )}
@@ -27,19 +30,19 @@ function Button({ text, onClick, icon, style }) {
 
 export function Dialog({ open, children, header, subheader, actions, size }) {
   return open ? (
-    <div className="modal">
+    <div className="profile-modal">
       <div
-        className="modal-data"
+        className="profile-modal-data"
         style={{
           margin: `10% ${
             size === "md" ? "20%" : size === "lg" ? "10%" : "30%"
           }`,
         }}
       >
-        <div className="modal-header">{header}</div>
-        <div className="modal-subheader">{subheader}</div>
-        <div className="modal-content">{children}</div>
-        <div className="modal-actions">{actions}</div>
+        <div className="profile-modal-header">{header}</div>
+        <div className="profile-modal-subheader">{subheader}</div>
+        <div className="profile-modal-content">{children}</div>
+        <div className="profile-modal-actions">{actions}</div>
       </div>
     </div>
   ) : null;
@@ -48,7 +51,7 @@ export function Dialog({ open, children, header, subheader, actions, size }) {
 function IconButton({ onClick, icon, style, children, iconSize }) {
   return (
     <button
-      className="icon-button"
+      className="profile-icon-button"
       onClick={onClick}
       style={{
         display: "flex",
@@ -94,7 +97,7 @@ function SearchField({ search }) {
   const [value, setValue] = useState("");
 
   return (
-    <div className="search">
+    <div className="profile-search">
       <input
         type="search"
         placeholder="search..."
@@ -133,7 +136,7 @@ function ProfileAppear({ user }) {
           alt="background profile avatar"
           style={{ backgroundImage: `url(${background || "default-bg.jpg"})` }}
         >
-          <div id="edit-profile-bg">
+          <div id="profile-edit-profile-bg">
             <IconButton
               icon="edit"
               onClick={() => onClickBackgroundRef.current.click()}
@@ -152,7 +155,7 @@ function ProfileAppear({ user }) {
         id="profile-avatar"
         style={{ backgroundImage: `url(${avatar || "default-avatar.png"})` }}
       >
-        <div id="edit-profile-avatar">
+        <div id="profile-edit-profile-avatar">
           <IconButton
             icon="edit"
             onClick={() => onClickAvatarRef.current.click()}
@@ -296,7 +299,7 @@ function SearchAnimes() {
         ) : (
           <div>
             {animes ? (
-              <ul className="simple-list">
+              <ul className="profile-simple-list">
                 {animes.map((a, index) => (
                   /// TODO go to detail anime page
                   <li key={index}>
@@ -368,9 +371,9 @@ export default function Profile() {
   };
 
   return (
-    <main className="main-profile">
+    <>
       <ProfileAppear user={user} />
       <ProfileFooter user={user} />
-    </main>
+    </>
   );
 }

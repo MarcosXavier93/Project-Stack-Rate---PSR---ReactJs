@@ -1,7 +1,6 @@
 import "../../Styles/global.css";
 import { useState, useEffect } from "react";
 import SearchContainer from "./SearchContainer";
-import { Component } from "react";
 import Row from "./Row";
 
 function Home() {

@@ -63,15 +63,14 @@ header > nav {
 /* Inicio do CSS da Tela Home*/
 
 input[type="search"] {
-  width: 78%;
-  margin-left: 130px;
+  width: 100%;
+  margin-left: 25 px;
   padding: 12px 40px;
   margin-bottom: 50px;
-
-  border: 2px solid #a9a9ba;
+  border: 2px solid var(--grey-1);
   border-radius: 5px;
-  color: #2a2a2e;
-  background-color: white;
+  color: var(--grey-5);
+  background-color: var(--white-1);
   background-image: url("../HomeScreen/assets/imagens/search.png");
   background-position: 10px 10px;
   background-size: 20px;
@@ -79,56 +78,47 @@ input[type="search"] {
   transition: width 0home4s ease-in-out;
 }
 input[type="search"]:focus {
-  border: 4px solid #555;
+  border: 4px solid var(--grey-4);
 }
-h2 {
+.Home_Title {
   color: aliceblue;
   margin-left: 3%;
   margin-bottom: 2%;
 }
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Fira Sans", sans-serif;
-  background-color: #2a2a2e;
-}
 .Home-Title_Row {
   margin-left: 10px;
-}
-.Home-row_posters {
-  width: 80%;
-  margin-left: 10%;
-  max-width: fit-content;
 }
 
 .Home-arrow {
   position: absolute;
-  cursor: pointer;
-  z-index: 50;
 }
 .Home-arrow svg {
   transition: color 300ms;
 }
-.Home-arrow svg:hover {
-  color: purple;
+.arrow svg:hover {
+  color: var(--purple);
 }
 
 ::-webkit-scrollbar {
   display: none;
   width: 0;
 }
-.Home-next {
-  right: -5% !important;
+.next {
+  right: 0% !important;
   top: 50% !important;
-  font-size: xx-large;
-  color: white;
+  font-size: xxx-large;
+  color: var(--white-1);
 }
-.Home-prev {
+.prev {
   left: -5% !important;
-  size: 50px !important;
-
-  top: 50%;
-  font-size: xx-large;
-  color: white;
+  top: 50% !important;
+  font-size: xxx-large;
+  color: var(--white-1);
+  max-width: 200px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
 }
 /*Fim do CSS da Pagina Home*/
+.Home-row_posters {
+}

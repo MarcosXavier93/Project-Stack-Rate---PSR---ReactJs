@@ -19,12 +19,12 @@ function Row(props, { title }) {
     );
   };
   const settings = {
+    dots: false,
     infinite: true,
     speed: 100,
-    slidesToShow: 5,
-    centerMode: true,
-    centerPadding: 0,
-    slidesToSlide: 8,
+    slidesToShow: 4,
+    slidesToSlide: 5,
+    slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };

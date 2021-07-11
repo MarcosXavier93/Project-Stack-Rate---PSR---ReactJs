@@ -59,13 +59,13 @@ const ProfileList = () => {
 const Header = props => {
   const [state] = React.useReducer(reducer, initialState)
 
-  return <header>
+  return <header id='myAL-Style-h'>
       <div>
         <div>
-          <span className='material-icons icon-header-size'>menu</span>
+          <span className='material-icons myAL-icon-header-size'>menu</span>
           <h2>{state.user.name} Anime List</h2>
         </div>
-        <span className='material-icons icon-header-size'>account_circle</span>
+        <span className='material-icons myAL-icon-header-size'>account_circle</span>
       </div>
   </header>
 }
@@ -74,7 +74,7 @@ const Content = props => {
   const [state] = React.useReducer(reducer, initialState)
 
   return <main>
-    <section id='search'>
+    <section id='myAL-search'>
       <div>
         <label>
           <input type='text' placeholder='Pesquise'></input>
@@ -85,7 +85,7 @@ const Content = props => {
     <section>
       { state.profileList.map((anime, index) =>( 
         <ul key={index}>
-          <li className='paper'><ListItem item={anime} key={anime.mal_id}/></li>
+          <li className='myAL-paper'><ListItem item={anime} key={anime.mal_id}/></li>
         </ul>
       ))}
     </section>
@@ -96,14 +96,14 @@ const ListItem = props => {
   const [state, dispatch] = React.useReducer(reducer, initialState)
 
   return <article>
-    <div className='list-card'>
+    <div className='myAL-list-card'>
       <div>
         <img src={props.item.image_url} alt={props.item.title} width='200px'/>
       </div>  
-      <div className='slice-box-card'>
-        <p id='title-card'>{props.item.title}</p>
-        <p id='epsode-number-card'>Número de Episódios: {props.item.total_episodes}</p>
-        <p className='description-card'> 
+      <div className='myAL-slice-box-card'>
+        <p id='myAL-title-card' className='myAL-Style-p'>{props.item.title}</p>
+        <p id='myAL-epsode-number-card' className='myAL-Style-p'>Número de Episódios: {props.item.total_episodes}</p>
+        <p className='myAL-description-card myAL-Style-p'> 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a risus faucibus, tempus purus sit amet, ultricies nunc. 
           Duis vestibulum sed nisl sit amet rutrum. Vivamus nec erat efficitur, pretium tellus eu, scelerisque lectus. Donec sollicitudin 
           venenatis lobortis. Ut elementum a lorem ut suscipit. Quisque pharetra id nibh in maximus. Fusce at ipsum augue. Nullam eu quam nec erat 
@@ -112,15 +112,15 @@ const ListItem = props => {
         </p>
         <p>Tipo: {props.item.type}</p>
 
-        <div id='ranking-status'>
-          <p id='rating'>Rating: {props.item.rating}</p>
-          <p id='priority'>Priority: {props.item.priority}</p>
+        <div id='myAL-ranking-status'>
+          <p id='myAL-rating' className='myAL-Style-p'>Rating: {props.item.rating}</p>
+          <p id='myAL-priority' className='myAL-Style-p'>Priority: {props.item.priority}</p>
         </div>
       </div>
         
-      <div id='user-actions'>
-        <span className='material-icons icons-treatment'>star_rate</span>
-        <span className='material-icons icons-treatment'>thumb_up</span> 
+      <div id='myAL-user-actions'>
+        <span className='material-icons myAL-icons-treatment'>star_rate</span>
+        <span className='material-icons myAL-icons-treatment'>thumb_up</span> 
         <ArrowButton rotate={ state.collapsedList.toString() } icon='expand_more' onClick={ () => dispatch('ANIME/TOGGLE_EXPANSED_LIST') } />
       </div>
     </div> 
@@ -129,10 +129,10 @@ const ListItem = props => {
 }
 
 const ExpansedList = props => {
-  return<div className={ props.open ? 'expand visible' : 'expand' }>
-    <div className='expanded-content'>
+  return<div className={ props.open ? 'myAL-expand myAL-visible' : 'myAL-expand' }>
+    <div className='myAL-expanded-content'>
       <h2>My Review</h2>
-      <p className='description-card'> 
+      <p className='description-card myAL-Style-p'> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a risus faucibus, tempus purus sit amet, ultricies nunc. 
         Duis vestibulum sed nisl sit amet rutrum. Vivamus nec erat efficitur, pretium tellus eu, scelerisque lectus. Donec sollicitudin 
         venenatis lobortis. Ut elementum a lorem ut suscipit. Quisque pharetra id nibh in maximus. Fusce at ipsum augue. Nullam eu quam nec erat 
@@ -150,11 +150,11 @@ const ExpansedList = props => {
 }
 
 const ArrowButton = props => (
-  <button className={ (props.rotate === 'true') ? 'expand-button rotate' : 'expand-button' } {...props}><span className='material-icons icons-treatment'>{ props.icon }</span></button>
+  <button className={ (props.rotate === 'true') ? 'myAL-expand-button myAL-rotate' : 'myAL-expand-button' } {...props}><span className='material-icons myAL-icons-treatment'>{ props.icon }</span></button>
 )
 
 const Footer = props => {
-  return <footer>
+  return <footer id="myAL-Style-f">
     <div>
     </div>
   </footer>

@@ -1,20 +1,36 @@
 import React from "react";
-import {BrowserRouter as BRouter, Switch, Route} from "react-router-dom";
-
 import "./Styles/global.css";
-
-import Header from "./Components/Header";
-import NotFound from "./Components/NotFound";
-import Anime from "./DetailScreen/anime";
-import Profile from "./ProfileScreen/profile";
-import LoginScreen from "./LoginScreen/loginScreen";
-import RecoveryPasswordScreen from "./LoginScreen/RecoveryPasswordScreen/recoveryPasswordScreen";
-import RegisterScreen from "./LoginScreen/RegisterScreen/registerScreen";
+// import Profile from "./ProfileScreen/profile";
+// import Anime from "./DetailScreen/anime";
 // import Home from "./HomeScreen/Components/Home";
 // import MyAnimeList from "./MyAnimeList/myAnimeList";
+// import NotFound from "./Components/NotFound";
+import Header from "./Components/Header";
+import { BrowserRouter as BRouter, Switch, Route } from "react-router-dom";
 
 export default function Router() {
-    return (
-        <LoginScreen/>
-    )
+  return (
+    <BRouter>
+      <Header />
+      <main id="main">
+        {/* <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/anime">
+            <Anime />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
+          <Route exact path="/my-anime-list">
+            <MyAnimeList />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch> */}
+      </main>
+    </BRouter>
+  );
 }

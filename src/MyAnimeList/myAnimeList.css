@@ -18,22 +18,16 @@
     --double-space: 16px
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: var(--grey-5)
-}
-
 /* --- Header --- */
 
-header {
+#myAL-Style-h {
     width: 100%;
     color: var(--white);
     padding: var(--simple-space);
     background: var(--grey-2)
 }
 
-header > div {
+#myAL-Style-h > div {
     display: flex;
     margin: 0 auto;
     max-width: 1280px;
@@ -42,14 +36,14 @@ header > div {
     justify-content: space-between
 }
 
-header div {
+#myAL-Style-h div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--grey-2)
 }
 
-header h2 {
+#myAL-Style-h h2 {
     color: var(--white);
     margin: 0 var(--double-space);
     background: var(--grey-2)
@@ -66,13 +60,13 @@ main {
     color: var(--white)
 }
 
-#search {
+#myAL-search {
     display: flex;
     justify-content: flex-end;
     margin: var(--double-space) 0
 }
 
-#search div {
+#myAL-search div {
     width: 300px;
     height: 30px;
     display: flex;
@@ -82,7 +76,7 @@ main {
     background: var(--grey-1) 
 }
 
-#search div label > input {
+#myAL-search div label > input {
     width: 250px;
     height: 30px;
     border-radius: 0%;
@@ -92,16 +86,16 @@ main {
     font-size: var(--double-space)
 }
 
-#search div label > input::placeholder {
+#myAL-search div label > input::placeholder {
     color: var(--white)
 }
 
-#search div label > input:placeholder-shown {
+#myAL-search div label > input:placeholder-shown {
     font-size: var(--double-space); 
     border: 1px solid var(--white) 
 }
 
-#search div > span {
+#myAL-search div > span {
     margin: var(--simple-space);
     color: var(--white)
 }
@@ -112,17 +106,17 @@ section ul {
     margin: 32px 0
 }
 
-p {
+.myAL-Style-p {
     margin: var(--simple-space) 0 0 0
 }
 
-.icon-header-size {
+.myAL-icon-header-size {
     font-size: 48px;
     cursor: pointer;
     background: var(--grey-2)
 }
 
-.paper {
+.myAL-paper {
     padding: 24px 32px;
     border-radius: 12px;
     background-color: var(--grey-3);
@@ -131,47 +125,47 @@ p {
 
 /* --- Article -> First Div --- */
 
-.list-card {
+.myAL-list-card {
     display: flex;
     align-items: center;
     flex-direction: row
 }
 
-.slice-box-card {
+.myAL-slice-box-card {
     margin: 0 var(--double-space)
 }
 
-.list-card img {
+.myAL-list-card img {
     height: 100%;
     margin-top: 10px;
     border: 5px solid var(--grey-1)
 }
 
-#title-card {
+#myAL-title-card {
     font-size: 32px;
     font-weight: 400;
     color: var(--grey-1)
 }
 
-.description-card {
+.myAL-description-card {
     color: var(--light-grey);
     margin: var(--double-space) 0
 }
 
-#epsode-number-card {
+#myAL-epsode-number-card {
     color: var(--light-blue)
 }
 
 /* --- Article -> User Actions --- */
 
-#ranking-status {
+#myAL-ranking-status {
     padding: 0;
     display: flex;
     flex-direction: row;
     margin: var(--double-space) 0 0 0
 }
 
-#user-actions {
+#myAL-user-actions {
     margin: 0;
     padding: 0;
     display: flex;
@@ -179,16 +173,16 @@ p {
     align-items: center
 }
 
-#rating {
+#myAL-rating {
     color: var(--light-green)
 }
 
-#priority {
+#myAL-priority {
     color: var(--light-blue);
     margin: var(--simple-space) var(--double-space)
 }
 
-.icons-treatment {
+.myAL-icons-treatment {
     font-size: 32px;
     cursor: pointer;
     margin: 0 var(--double-space)
@@ -196,7 +190,7 @@ p {
 
 /* --- List expansed --- */
 
-.expand {
+.myAL-expand {
     height: 0;
     opacity: 0;
     overflow: hidden;
@@ -206,7 +200,7 @@ p {
     background: var(--grey-2)
 }
 
-.expand.visible {
+.myAL-expand.myAL-visible {
     opacity: 1;
     height: 250px;
     visibility: visible;
@@ -214,7 +208,7 @@ p {
     margin-top: var(--simple-space)
 }
 
-.expanded-content {
+.myAL-expanded-content {
     height: 250px;
     overflow-y: scroll;
     padding: var(--double-space)
@@ -222,7 +216,7 @@ p {
 
 /* --- Custom Components --- */
 
-.expand-button {
+.myAL-expand-button {
     cursor: pointer;
     padding: 5px 8px;
     border-radius: 50%;
@@ -234,37 +228,37 @@ p {
     margin: 0 var(--simple-space)
 }
   
-.expand-button:hover {
+.myAL-expand-button:hover {
     background-color: rgba(0, 0, 0, 0.1)
 }
   
-.expand-button:active {
+.myAL-expand-button:active {
     background-size: 100%;
     transition: background 100ms;
     background-color: rgba(0, 0, 0, 0.25)
 }
 
-.expand-button > span {
+.myAL-expand-button > span {
     margin: 0; 
     margin-top: 4px;
     font-size: 36px 
 }
 
-.expand-button.rotate {
+.myAL-expand-button.myAL-rotate {
     transform: rotate(180deg);
     transition: ease-in-out 500ms
 } 
 
 
 /* --- Footer --- */
-footer {
+#myAL-Style-f {
     width: 100%;
     color: var(--white);
     padding: var(--simple-space);
     background: var(--grey-5)
 }
 
-footer > div {
+#myAL-Style-f > div {
     display: flex;
     margin: 0 auto;
     max-width: 1280px;

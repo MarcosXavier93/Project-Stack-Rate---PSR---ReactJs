@@ -59,7 +59,7 @@ const ProfileList = () => {
 const Header = props => {
   const [state] = React.useReducer(reducer, initialState)
 
-  return <header id='myAL-Style-h'>
+  return <header id='myAL-Style-header'>
       <div>
         <div>
           <span className='material-icons myAL-icon-header-size'>menu</span>
@@ -73,7 +73,7 @@ const Header = props => {
 const Content = props => {
   const [state] = React.useReducer(reducer, initialState)
 
-  return <main>
+  return <main id='myAL-Style-main'>
     <section id='myAL-search'>
       <div>
         <label>
@@ -82,7 +82,7 @@ const Content = props => {
         <span className='material-icons'>search</span>
       </div>
     </section>  
-    <section>
+    <section id='myAL-Style-section'>
       { state.profileList.map((anime, index) =>( 
         <ul key={index}>
           <li className='myAL-paper'><ListItem item={anime} key={anime.mal_id}/></li>
@@ -101,9 +101,9 @@ const ListItem = props => {
         <img src={props.item.image_url} alt={props.item.title} width='200px'/>
       </div>  
       <div className='myAL-slice-box-card'>
-        <p id='myAL-title-card' className='myAL-Style-p'>{props.item.title}</p>
-        <p id='myAL-epsode-number-card' className='myAL-Style-p'>Número de Episódios: {props.item.total_episodes}</p>
-        <p className='myAL-description-card myAL-Style-p'> 
+        <p id='myAL-title-card' className='myAL-Style-paragraph'>{props.item.title}</p>
+        <p id='myAL-epsode-number-card' className='myAL-Style-paragraph'>Número de Episódios: {props.item.total_episodes}</p>
+        <p className='myAL-description-card myAL-Style-paragraph'> 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a risus faucibus, tempus purus sit amet, ultricies nunc. 
           Duis vestibulum sed nisl sit amet rutrum. Vivamus nec erat efficitur, pretium tellus eu, scelerisque lectus. Donec sollicitudin 
           venenatis lobortis. Ut elementum a lorem ut suscipit. Quisque pharetra id nibh in maximus. Fusce at ipsum augue. Nullam eu quam nec erat 
@@ -113,8 +113,8 @@ const ListItem = props => {
         <p>Tipo: {props.item.type}</p>
 
         <div id='myAL-ranking-status'>
-          <p id='myAL-rating' className='myAL-Style-p'>Rating: {props.item.rating}</p>
-          <p id='myAL-priority' className='myAL-Style-p'>Priority: {props.item.priority}</p>
+          <p id='myAL-rating' className='myAL-Style-paragraph'>Rating: {props.item.rating}</p>
+          <p id='myAL-priority' className='myAL-Style-paragraph'>Priority: {props.item.priority}</p>
         </div>
       </div>
         
@@ -132,7 +132,7 @@ const ExpansedList = props => {
   return<div className={ props.open ? 'myAL-expand myAL-visible' : 'myAL-expand' }>
     <div className='myAL-expanded-content'>
       <h2>My Review</h2>
-      <p className='description-card myAL-Style-p'> 
+      <p className='description-card myAL-Style-paragraph'> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a risus faucibus, tempus purus sit amet, ultricies nunc. 
         Duis vestibulum sed nisl sit amet rutrum. Vivamus nec erat efficitur, pretium tellus eu, scelerisque lectus. Donec sollicitudin 
         venenatis lobortis. Ut elementum a lorem ut suscipit. Quisque pharetra id nibh in maximus. Fusce at ipsum augue. Nullam eu quam nec erat 
@@ -154,7 +154,7 @@ const ArrowButton = props => (
 )
 
 const Footer = props => {
-  return <footer id="myAL-Style-f">
+  return <footer id="myAL-Style-footer">
     <div>
     </div>
   </footer>

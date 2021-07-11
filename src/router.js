@@ -12,7 +12,6 @@ export default function Router() {
   return (
     <BRouter>
       <Header />
-      <main id="main">
         {/* <Switch>
           <Route exact path="/">
             <Home />
@@ -30,7 +29,6 @@ export default function Router() {
             <NotFound />
           </Route>
         </Switch> */}
-      </main>
     </BRouter>
   );
 }

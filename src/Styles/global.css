@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:wght@100;300;400&display=swap");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 :root {
   --white-1: #ffffff;
@@ -57,3 +59,76 @@ header > nav {
   max-width: 1680px;
   box-sizing: border-box;
 }
+
+/* Inicio do CSS da Tela Home*/
+
+input[type="search"] {
+  width: 78%;
+  margin-left: 130px;
+  padding: 12px 40px;
+  margin-bottom: 50px;
+
+  border: 2px solid #a9a9ba;
+  border-radius: 5px;
+  color: #2a2a2e;
+  background-color: white;
+  background-image: url("../HomeScreen/assets/imagens/search.png");
+  background-position: 10px 10px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transition: width 0home4s ease-in-out;
+}
+input[type="search"]:focus {
+  border: 4px solid #555;
+}
+h2 {
+  color: aliceblue;
+  margin-left: 3%;
+  margin-bottom: 2%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+  background-color: #2a2a2e;
+}
+.Home-Title_Row {
+  margin-left: 10px;
+}
+.Home-row_posters {
+  width: 80%;
+  margin-left: 10%;
+  max-width: fit-content;
+}
+
+.Home-arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 50;
+}
+.Home-arrow svg {
+  transition: color 300ms;
+}
+.Home-arrow svg:hover {
+  color: purple;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+.Home-next {
+  right: -5% !important;
+  top: 50% !important;
+  font-size: xx-large;
+  color: white;
+}
+.Home-prev {
+  left: -5% !important;
+  size: 50px !important;
+
+  top: 50%;
+  font-size: xx-large;
+  color: white;
+}
+/*Fim do CSS da Pagina Home*/

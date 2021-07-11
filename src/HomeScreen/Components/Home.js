@@ -1,4 +1,4 @@
-import "../Style/HomeStyle.css";
+import "../../Styles/global.css";
 import { useState, useEffect } from "react";
 import SearchContainer from "./SearchContainer";
 import { Component } from "react";
@@ -6,9 +6,7 @@ import Row from "./Row";
 
 function Home() {
   const [animeLista, SetAnimeLista] = useState([]);
-  const [animeListaNovos, SetAnimeListaNovos] = useState([]);
   const [animeListaNovidades, SetAnimeListaNovidades] = useState([]);
-  const [topAnime, SetTopAnime] = useState([]);
   const [search, SetSearch] = useState("");
 
   const GetanimeListaNovidades = async () => {
@@ -34,8 +32,8 @@ function Home() {
   }, []);
 
   return (
-    <div className="Anime">
-      <div className="content-wrap">
+    <div className="Home-Anime">
+      <div className="Home-content-wrap">
         <SearchContainer
           HandleSearch={HandleSearch}
           search={search}

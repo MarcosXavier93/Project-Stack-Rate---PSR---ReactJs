@@ -1,12 +1,12 @@
 import React from "react";
-import "../Style/HomeStyle.css";
+import "../../Styles/global.css";
 import Slider from "react-slick";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function SearchContainer(props) {
   const PrevArrow = ({ onClick }) => {
     return (
-      <div className="arrow prev" onClick={onClick}>
+      <div className="Home-arrow prev" onClick={onClick}>
         <FaArrowLeft />
       </div>
     );
@@ -14,7 +14,7 @@ function SearchContainer(props) {
 
   const NextArrow = ({ onClick }) => {
     return (
-      <div className="arrow next" onClick={onClick}>
+      <div className="Home-arrow next" onClick={onClick}>
         <FaArrowRight />
       </div>
     );
@@ -31,8 +31,8 @@ function SearchContainer(props) {
   };
   return (
     <main>
-      <div className="main-header" onSubmit={props.HandleSearch}>
-        <form className="search-box">
+      <div className="Home-main-header" onSubmit={props.HandleSearch}>
+        <form className="Home-search-box">
           <input
             type="search"
             placeholder="Procure um anime aqui."
@@ -43,12 +43,12 @@ function SearchContainer(props) {
         </form>
       </div>
 
-      <div className="row">
-        <div className="row_posters">
+      <div className="Home-row">
+        <div className="Home-row_posters">
           <Slider {...settings}>
             {props.animeLista.map((anime) => (
               <a
-                className="row_poster"
+                className="Home-row_poster"
                 href={anime.url}
                 target="_blank"
                 rel="noreferrer"

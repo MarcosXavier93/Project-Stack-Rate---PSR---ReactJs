@@ -5,7 +5,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 function Row(props, { title }) {
   const PrevArrow = ({ onClick }) => {
     return (
-      <div className="arrow prev" onClick={onClick}>
+      <div className="Home-arrow prev" onClick={onClick}>
         <FaArrowLeft />
       </div>
     );
@@ -13,7 +13,7 @@ function Row(props, { title }) {
 
   const NextArrow = ({ onClick }) => {
     return (
-      <div className="arrow next" onClick={onClick}>
+      <div className="Home-arrow next" onClick={onClick}>
         <FaArrowRight />
       </div>
     );
@@ -21,7 +21,7 @@ function Row(props, { title }) {
   const settings = {
     infinite: true,
     speed: 100,
-    slidesToShow: 4,
+    slidesToShow: 5,
     centerMode: true,
     centerPadding: 0,
     slidesToSlide: 8,
@@ -29,13 +29,13 @@ function Row(props, { title }) {
     prevArrow: <PrevArrow />,
   };
   return (
-    <div className="row">
-      <div className="row_posters">
+    <div className="Home-row">
+      <div className="Home-row_posters">
         <h2>{props.title}</h2>
         <Slider {...settings}>
           {props.animeListaNovidades.map((anime) => (
             <a
-              className="row_poster"
+              className="Home-row_poster"
               href={anime.url}
               target="_blank"
               rel="noreferrer"

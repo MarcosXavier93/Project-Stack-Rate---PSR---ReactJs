@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:wght@100;300;400&display=swap");
 
 :root {
-  --white-1: #ffffff;
-  --grey-1: #a9a9ba;
-  --grey-2: #6f6f7a;
-  --grey-3: #35353b;
-  --grey-4: #2e2e33;
-  --grey-5: #2a2a2e;
-  --purple: #9572f8;
+  --white-1: white;
+  --grey-1: #A9A9BA;
+  --grey-2: #6F6F7A;
+  --grey-3: #35353B;
+  --grey-4: #2E2E33;
+  --grey-5: #2A2A2E;
+  --purple: #9572F8;
 }
 
 * {
-  color: var(--white-1);
   font-family: "Roboto", "Quicksand", "sans-serif";
 }
 
@@ -23,7 +22,7 @@ body {
 
 header > nav {
   background-color: var(--grey-2);
-  box-shadow: 0px 4px 2px 2px var(--grey-5);
+  box-shadow: 0 4px 2px 2px var(--grey-5);
   margin: auto;
   padding: 8px;
   position: fixed;
@@ -52,8 +51,7 @@ header > nav {
 }
 
 #main {
-  margin: auto;
-  margin-top: 48px;
+  margin: 48px auto auto;
   max-width: 1680px;
   box-sizing: border-box;
 }

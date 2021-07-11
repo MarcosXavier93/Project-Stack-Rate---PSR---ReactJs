@@ -1,0 +1,30 @@
+.remember-me {
+    cursor: pointer;
+}
+
+.remember-me input {
+    background: #2A2A2E;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #2A2A2E;
+    -webkit-appearance: none;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: all 150ms ease;
+}
+
+.remember-me input:checked {
+    background-color: #D8CAFF;
+}
+
+.remember-me-text {
+    color: #6F6F7A;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.remember-me-text:hover {
+    color: #D8CAFF;
+}

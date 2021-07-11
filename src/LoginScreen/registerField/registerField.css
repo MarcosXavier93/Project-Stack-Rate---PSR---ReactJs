@@ -1,0 +1,15 @@
+.not-a-member-yet-text {
+    font-size: 18px;
+    color: #6F6F7A;
+}
+
+
+.register-now-text {
+    text-decoration: underline;
+    color: white;
+}
+
+.register-now-text:hover {
+    color: #D8CAFF;
+    cursor: pointer;
+}

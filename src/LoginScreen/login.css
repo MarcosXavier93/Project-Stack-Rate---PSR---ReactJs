@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #35353B;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    min-height: 100vh;
+}
+
+.login-to-your-account-text {
+    font-size: 64px;
+    font-family: 'Quicksand SemiBold', serif;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 32px;
+    color: white;
+}
+
+.description-login-text {
+    color: #6F6F7A;
+}
+
+.or-text {
+    margin-bottom: 24px;
+    color: #6F6F7A;
+}
+
+*::selection {
+    background-color: #D8CAFF;
+}

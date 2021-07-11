@@ -1,0 +1,39 @@
+img {
+    width: 32px;
+    margin-right: 32px;
+}
+
+.login-with-google-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
+    margin-bottom: 32px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid #D8CAFF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    width: 311px;
+    height: 76px;
+}
+
+.login-with-google-button:hover {
+    cursor: pointer;
+    border: 2px solid #9580ff;
+}
+
+.login-with-google-button:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.login-with-google-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: white;
+}

@@ -11,8 +11,10 @@
 }
 
 * {
+  color: white;
   font-family: "Roboto", "Quicksand", "sans-serif";
 }
+
 
 body {
   margin: 0;

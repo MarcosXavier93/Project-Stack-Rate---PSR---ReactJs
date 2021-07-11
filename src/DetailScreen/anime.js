@@ -60,57 +60,47 @@ const Anime = () => {
   }
 
   return <>
-    <Header />
-
-    <main>
-      <section className='paper'>
-        <div id='title'>
+    <main id='anime-page'>
+      <div className='anime-paper' id='anime-info'>
+        <div id='anime-title'>
           <h1>{ state.anime.name }</h1>
 
-          <IconButton icon='star_rate' onClick={ () => {} } />
+          <IconButton icon='star_rate' style={{ color: '#FFFFFF' }} onClick={ () => {} } />
         </div>
 
-        <img id='main-image' src={ state.anime.image_url } alt='' />
+        <img src={ state.anime.image_url } alt='' />
 
         <p>Episodes: { state.anime.episodes }</p>
         <p>Author: { state.anime.author }</p>
         <p>Genres: { state.anime.genres.join(', ') }</p>
         <p>Published: { state.anime.published }</p>
+      </div>
+
+      <section className='anime-paper' id='anime-rank'>
+        <h2>Rank #{ state.anime.rank }</h2>
       </section>
 
-      <section>
-        <div className='paper'>
-          <h2>Rank #{ state.anime.rank }</h2>
+      <section className='anime-paper' id='anime-general-rating'>
+        <div>
+          <h2>Score</h2>
+          <p>{ state.anime.mean_score }<span>{ state.anime.votes } votes</span></p>
         </div>
 
-        <div className='paper' id='rating'>
-          <div>
-            <h2>Score</h2>
-            <p>{ state.anime.mean_score }<span>{ state.anime.votes } votes</span></p>
-          </div>
+        <div className='divider' />
 
-          <div className='divider' />
+        <div><h2>Status</h2><p>{ state.anime.status }</p></div>
 
-          <div>
-            <h2>Status</h2>
-            <p>{ state.anime.status }</p>
-          </div>
+        <div><h2>Your rate</h2><p>{ state.anime.user_score }</p></div>
 
-          <div>
-            <h2>Your rate</h2>
-            <p>{ state.anime.user_score }</p>
-          </div>
+        <IconButton icon='edit' style={{ color: '#FFFFFF' }} onClick={ () => dispatch({ type: 'ANIME/SHOW_DIALOG' }) } />
+      </section>
 
-          <div>
-            <IconButton icon='edit' onClick={ () => dispatch({ type: 'ANIME/SHOW_DIALOG' }) } />
-          </div>
-        </div>
+      <section className='anime-paper' id='anime-description'>
+        <h2 style={{ marginBottom: 24 }}>Description</h2>
+        <p>{ state.anime.description }</p>
+      </section>
 
-        <div className='paper' id='description'>
-          <h2>Description</h2>
-          <p>{ state.anime.description }</p>
-        </div>
-
+      <section id='anime-video'>
         <iframe src={ state.anime.video_url } title='YouTube video' frameBorder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowFullScreen />
       </section>
     </main>
@@ -119,22 +109,16 @@ const Anime = () => {
   </>
 }
 
-const Header = () => {
-  return <header>
-    <div />
-  </header>
-}
-
 const ChangeRatingDialog = props => {
-  const [ state, setState ] = React.useState({ status: '', score: 0 })
+  const [state, setState] = React.useState({ status: '', score: 0 })
 
   const handleStateChange = (key, value) => { setState({ ...state, [key]: value }) }
 
   React.useEffect(() => { setState(props.initialState) }, [props.initialState])
 
-  return <div className={ props.open ? 'overlay visible' : 'overlay' }>
-    <div className='dialog'>
-      <h2 style={{ marginBottom: 24 }}>Change anime rating</h2>
+  return <div className={ props.open ? 'anime-dialog-overlay visible' : 'anime-dialog-overlay' }>
+    <div id='anime-change-rating-dialog'>
+      <h2>Change anime rating</h2>
 
       <label>
         Status:
@@ -164,15 +148,15 @@ const ChangeRatingDialog = props => {
       </label>
 
       <div style={{ textAlign: 'right' }}>
-        <button style={{ marginRight: 8 }} className='text-button' onClick={ props.onClose }>CANCEL</button>
-        <button className='text-button' onClick={ () => { props.onChangeRating(state.status, state.score); props.onClose() } }>CHANGE</button>
+        <button style={{ marginRight: 8 }} className='anime-text-button' onClick={ props.onClose }>CANCEL</button>
+        <button className='anime-text-button' onClick={ () => { props.onChangeRating(state.status, state.score); props.onClose() } }>CHANGE</button>
       </div>
     </div>
   </div>
 }
 
 const IconButton = props => (
-  <button className='icon-button' { ...props }><span className='material-icons'>{ props.icon }</span></button>
+  <button className='anime-icon-button' { ...props }><span className='material-icons'>{ props.icon }</span></button>
 )
 
 export default Anime

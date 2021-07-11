@@ -2,7 +2,7 @@ import './forgotPassword.css'
 
 const ForgotPassword = () => {
     return (
-        <a className="forgot-password-text">Forgot Password?</a>
+        <a className="forgot-password-text" href="../../../RecoveryPasswordScreen">Forgot Password?</a>
     )
 }
 

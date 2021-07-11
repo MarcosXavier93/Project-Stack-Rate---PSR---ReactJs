@@ -14,7 +14,7 @@ const InputPassword = () => {
     return (
         <div className="login-password-field">
             {InputField("Password", passwordShown ? "text" : "password")}
-            <i className="visibility-icon" onClick={togglePasswordVisiblity}>{passwordShown ? eyeSlashed : eye}</i>
+            <span id="password-visibility-icon" onClick={togglePasswordVisiblity}>{passwordShown ? eyeSlashed : eye}</span>
         </div>
     );
 }

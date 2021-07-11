@@ -1,4 +1,7 @@
 .remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
@@ -22,7 +25,6 @@
 .remember-me-text {
     color: #6F6F7A;
     font-size: 18px;
-    cursor: pointer;
 }
 
 .remember-me-text:hover {

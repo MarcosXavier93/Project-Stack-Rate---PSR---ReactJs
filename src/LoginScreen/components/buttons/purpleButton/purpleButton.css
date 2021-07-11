@@ -1,4 +1,4 @@
-.manual-login-button {
+.purple-button {
     width: 84%;
     height: 60px;
     background: linear-gradient(180deg, #9572F8 0%, #6954A2 100%);
@@ -15,7 +15,7 @@
     margin-bottom: 32px;
 }
 
-.manual-login-button:active {
+.purple-button:active {
     position: relative;
     top: 2px;
     left: 2px;

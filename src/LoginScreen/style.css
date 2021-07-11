@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-}
-
-body {
+.background-login {
     background-color: #35353B;
 }
 
@@ -15,18 +11,6 @@ body {
     text-align: center;
     margin: 0 auto 0 auto;
     min-height: 100vh;
-}
-
-.login-to-your-account-text {
-    font-size: 64px;
-    font-family: 'Quicksand SemiBold', serif;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 32px;
-    color: white;
-}
-
-.description-login-text {
-    color: #6F6F7A;
 }
 
 .or-text {

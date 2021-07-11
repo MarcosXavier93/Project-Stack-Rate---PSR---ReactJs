@@ -1,0 +1,23 @@
+.background-login {
+    background-color: #35353B;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    min-height: 100vh;
+}
+
+.or-text {
+    margin-bottom: 24px;
+    color: #6F6F7A;
+}
+
+*::selection {
+    background-color: #D8CAFF;
+}

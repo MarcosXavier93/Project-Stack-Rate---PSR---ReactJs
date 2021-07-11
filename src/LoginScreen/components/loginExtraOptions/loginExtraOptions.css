@@ -1,0 +1,5 @@
+.login-extra-options-container {
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+}

@@ -1,36 +1,40 @@
 import React from "react";
+import { BrowserRouter as BRouter, Switch, Route } from "react-router-dom";
+
 import "./Styles/global.css";
-// import Profile from "./ProfileScreen/profile";
-// import Anime from "./DetailScreen/anime";
+
+import Header from "./Components/Header";
+import NotFound from "./Components/NotFound";
+import Anime from "./DetailScreen/anime";
+import Profile from "./ProfileScreen/profile";
 // import Home from "./HomeScreen/Components/Home";
 // import MyAnimeList from "./MyAnimeList/myAnimeList";
-// import NotFound from "./Components/NotFound";
-import Header from "./Components/Header";
-import { BrowserRouter as BRouter, Switch, Route } from "react-router-dom";
 
 export default function Router() {
   return (
     <BRouter>
       <Header />
-      <main id="main">
-        {/* <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+        <Switch>
+          {/* <Route exact path="/">
+            <main id="main">
+              <Home />
+            </main>
+          </Route> */}
           <Route exact path="/anime">
             <Anime />
           </Route>
           <Route exact path="/profile">
-            <Profile />
+            <main id="main">
+              <Profile />
+            </main>
           </Route>
-          <Route exact path="/my-anime-list">
+          {/* <Route exact path="/my-anime-list">
             <MyAnimeList />
-          </Route>
+          </Route> */}
           <Route>
             <NotFound />
           </Route>
-        </Switch> */}
-      </main>
+        </Switch>
     </BRouter>
-  );
+  )
 }

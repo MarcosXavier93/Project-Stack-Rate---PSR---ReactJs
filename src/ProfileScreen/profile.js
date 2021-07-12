@@ -16,10 +16,7 @@ function Button({ text, onClick, icon, style }) {
   return (
     <button className="profile-button" onClick={onClick} style={style}>
       {icon && (
-        <span
-          style={{ marginRight: icon ? 8 : 0 }}
-          className="material-icons"
-        >
+        <span style={{ marginRight: icon ? 8 : 0 }} className="material-icons">
           {icon}
         </span>
       )}
@@ -371,9 +368,9 @@ export default function Profile() {
   };
 
   return (
-    <>
+    <main id="profile-main">
       <ProfileAppear user={user} />
       <ProfileFooter user={user} />
-    </>
+    </main>
   );
 }

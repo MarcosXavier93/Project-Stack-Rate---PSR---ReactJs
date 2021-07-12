@@ -3,8 +3,8 @@ import {useState} from "react";
 import {MdVisibility, MdVisibilityOff} from "react-icons/all";
 import InputField from "../InputField";
 
-const eye = <MdVisibility/>;
-const eyeSlashed = <MdVisibilityOff/>;
+const eye = <MdVisibility fill="#6f6f7a" />;
+const eyeSlashed = <MdVisibilityOff fill="#6f6f7a" />;
 
 const InputPassword = () => {
     const [passwordShown, setPasswordShown] = useState(false);

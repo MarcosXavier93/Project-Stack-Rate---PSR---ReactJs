@@ -50,7 +50,7 @@ const ProfileList = () => {
   state.profileList = request_List_Watching
 
   return <>
-    <Header />
+    {/* <Header /> */}
     <Content />
     <Footer />
   </>

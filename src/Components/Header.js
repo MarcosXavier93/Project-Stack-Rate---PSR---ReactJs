@@ -10,6 +10,9 @@ export function Header() {
       <nav id="menu-principal">
         <ul>
           <li>
+            <Link to="/login">login</Link>
+          </li>
+          <li>
             <Link to="/">home</Link>
           </li>
           <li>
@@ -17,6 +20,9 @@ export function Header() {
           </li>
           <li>
             <Link to="/my-anime-list">my anime list</Link>
+          </li>
+          <li>
+            <Link to="/anime">anime</Link>
           </li>
         </ul>
       </nav>

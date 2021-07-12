@@ -2,7 +2,7 @@ import React from "react";
 import "./Styles/global.css";
 import Profile from "./ProfileScreen/profile";
 import Anime from "./DetailScreen/anime";
-// import Home from "./HomeScreen/Components/Home";
+import Home from "./HomeScreen/Components/Home";
 import MyAnimeList from "./MyAnimeList/myAnimeList";
 import NotFound from "./Components/NotFound";
 import Header from "./Components/Header";
@@ -19,9 +19,9 @@ export default function Router() {
         <Route exact path="/login">
           <Login />
         </Route>
-        {/* <Route exact path="/">
+        <Route exact path="/">
           <Home />
-        </Route> */}
+        </Route>
         <Route exact path="/anime">
           <Anime />
         </Route>

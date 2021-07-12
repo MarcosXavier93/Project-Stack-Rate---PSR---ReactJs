@@ -31,7 +31,7 @@ function Row(props, { title }) {
   return (
     <div className="row">
       <div className="row_posters">
-        <h2>{props.title}</h2>
+        <h2 className="home-title">{props.title}</h2>
         <Slider {...settings}>
           {props.animeListaNovidades.map((anime) => (
             <a

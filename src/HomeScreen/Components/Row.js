@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import "../Style/HomeStyle.css";
 
 function Row(props, { title }) {
   const PrevArrow = ({ onClick }) => {
@@ -18,16 +19,110 @@ function Row(props, { title }) {
       </div>
     );
   };
+
   const settings = {
     infinite: true,
     speed: 100,
     slidesToShow: 4,
+    slidesToSlide: 5,
     centerMode: true,
     centerPadding: 0,
-    slidesToSlide: 8,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerPadding: 0,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 3840,
+        settings: {
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+    ],
+
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
   return (
     <div className="row">
       <div className="row_posters">

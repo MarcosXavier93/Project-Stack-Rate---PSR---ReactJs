@@ -36,7 +36,7 @@
 .row_posters {
   width: 80%;
   margin-left: 10%;
-  max-width: fit-content;
+  max-width: 100%;
 }
 
 .arrow {

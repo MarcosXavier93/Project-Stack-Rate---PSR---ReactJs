@@ -19,16 +19,110 @@ function SearchContainer(props) {
       </div>
     );
   };
+
   const settings = {
     infinite: true,
-    lazyload: true,
-    speed: 300,
+    speed: 100,
     slidesToShow: 4,
+    slidesToSlide: 5,
     centerMode: true,
     centerPadding: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerPadding: 0,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 3840,
+        settings: {
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          dots: false,
+          speed: 100,
+          slidesToSlide: 3,
+          centerMode: true,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+    ],
+
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
   return (
     <main>
       <div className="main-header" onSubmit={props.HandleSearch}>

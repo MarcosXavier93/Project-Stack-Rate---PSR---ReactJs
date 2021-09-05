@@ -8,6 +8,8 @@ const LoginWithGoogle = () => {
     const responseGoogleSuccess = (response) => {
         console.log('Success login')
         console.log(response)
+        // TODO: set user session
+        // if use not present on db, create
     }
     const responseGoogleFailed = (response) => {
         console.log('Failed login')

@@ -120,8 +120,11 @@ function ProfileAppear({ user }) {
   const onClickAvatarRef = useRef();
   const onClickBackgroundRef = useRef();
 
+  // TODO: update avatar using API
   const uploadAvatar = (e) =>
     uploadImage(e?.target?.files?.["0"]).then((data) => setAvatar(data));
+
+  // TODO: update avatar using API
   const uploadBackground = (e) =>
     uploadImage(e?.target?.files?.["0"]).then((data) => setBackground(data));
 

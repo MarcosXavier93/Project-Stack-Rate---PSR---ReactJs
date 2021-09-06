@@ -1,0 +1,54 @@
+{
+  "ya": "118031860720791181446",
+  "Zb": {
+    "token_type": "Bearer",
+    "access_token": "ya29.a0ARrdaM-1uCEu4cD18a9FtqGWuMUfacpimYG9l0Vdn525OJTdzlBau9Dlf_uLI2i3TvxvEWD9Da6eg121s45R-3v-TaRgFKOR4dPaimoOOtBLrk_-lRJhkoZ7f8XgpHPooo0LndmV2coil81pbWwgpFDAs9vy",
+    "scope": "email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+    "login_hint": "AJDLj6JUa8yxXrhHdWRHIV0S13cA_w_OOMXa3lJOVt6OsW7wItWUdwqA2epI7j9ubFxE_RiO4yrBDv7diT8RnXucFXG7ZhqJBw",
+    "expires_in": 3599,
+    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk5MWIwNjM2YWFkYTM0MWM1YTA4ZTBkOGYyNDA2OTcyMDY0ZGM4ZWQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNDY0MjIwMDQxMDMtbmo0aDYza21rYjl0cWJhNm4xZHZ2aWNhZDM1ZDhvNTcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI0NjQyMjAwNDEwMy1uajRoNjNrbWtiOXRxYmE2bjFkdnZpY2FkMzVkOG81Ny5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExODAzMTg2MDcyMDc5MTE4MTQ0NiIsImVtYWlsIjoidmluaWxpbWEwN0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IlN4VC11Z2Q2a3JTaXZjaVI5Zk1rNnciLCJuYW1lIjoiVmluw61jaXVzIEYuIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdncWtHV01Zc09XdC1lcm1zUGhsQjFkN2RlSVBwR2FmVTRiUmJSQT1zOTYtYyIsImdpdmVuX25hbWUiOiJWaW7DrWNpdXMiLCJmYW1pbHlfbmFtZSI6IkYuIiwibG9jYWxlIjoicHQtQlIiLCJpYXQiOjE2MzA4OTA2NjYsImV4cCI6MTYzMDg5NDI2NiwianRpIjoiZDhkMTI2YzE5Y2ZkOTg2MTYxZjhkYWU5ZDE3Y2FmMDc4NjQxNTE4ZiJ9.U6Q_Rb10VX8lUhSJSH3otaiuTBdNR1GbI8_KKVQ9oLH8eVGs0lvhn761eC5vaxdx1WXc_1VYLrCCfQEhI5T-LJAnzhXnuEiJvcW8Ry5quaBdhlkZV-eFSEIo3PVm7qQ5R_uPUBOxjIX-QLUiFviXiUfCc3rSDyFV_OIsBwa8Y8HxUcUpf4k7pmcfxB4PF3VxhTFCDeSwbtuj3tu9kGup5XmSgQKz6gB_aQecP2Zw9zmb7e0lfhtE-jU91B9ZBjAS1iaw-j3-hWsU3c701QHilxsd3MDEYg-fbbb92Cal3BnycKg4w3gU7qeuK7lpSrpfsojNDzXZLo1t8Sqd1YpA-g",
+    "session_state": {
+      "extraQueryParams": {
+        "authuser": "0"
+      }
+    },
+    "first_issued_at": 1630890668151,
+    "expires_at": 1630894267151,
+    "idpId": "google"
+  },
+  "Vs": {
+    "TS": "118031860720791181446",
+    "Pe": "Vinícius F.",
+    "yU": "Vinícius",
+    "yS": "F.",
+    "vJ": "https://lh3.googleusercontent.com/a-/AOh14GgqkGWMYsOWt-ermsPhlB1d7deIPpGafU4bRbRA=s96-c",
+    "Gt": "vinilima07@gmail.com"
+  },
+  "googleId": "118031860720791181446",
+  "tokenObj": {
+    "token_type": "Bearer",
+    "access_token": "ya29.a0ARrdaM-1uCEu4cD18a9FtqGWuMUfacpimYG9l0Vdn525OJTdzlBau9Dlf_uLI2i3TvxvEWD9Da6eg121s45R-3v-TaRgFKOR4dPaimoOOtBLrk_-lRJhkoZ7f8XgpHPooo0LndmV2coil81pbWwgpFDAs9vy",
+    "scope": "email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+    "login_hint": "AJDLj6JUa8yxXrhHdWRHIV0S13cA_w_OOMXa3lJOVt6OsW7wItWUdwqA2epI7j9ubFxE_RiO4yrBDv7diT8RnXucFXG7ZhqJBw",
+    "expires_in": 3599,
+    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk5MWIwNjM2YWFkYTM0MWM1YTA4ZTBkOGYyNDA2OTcyMDY0ZGM4ZWQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNDY0MjIwMDQxMDMtbmo0aDYza21rYjl0cWJhNm4xZHZ2aWNhZDM1ZDhvNTcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI0NjQyMjAwNDEwMy1uajRoNjNrbWtiOXRxYmE2bjFkdnZpY2FkMzVkOG81Ny5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExODAzMTg2MDcyMDc5MTE4MTQ0NiIsImVtYWlsIjoidmluaWxpbWEwN0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IlN4VC11Z2Q2a3JTaXZjaVI5Zk1rNnciLCJuYW1lIjoiVmluw61jaXVzIEYuIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdncWtHV01Zc09XdC1lcm1zUGhsQjFkN2RlSVBwR2FmVTRiUmJSQT1zOTYtYyIsImdpdmVuX25hbWUiOiJWaW7DrWNpdXMiLCJmYW1pbHlfbmFtZSI6IkYuIiwibG9jYWxlIjoicHQtQlIiLCJpYXQiOjE2MzA4OTA2NjYsImV4cCI6MTYzMDg5NDI2NiwianRpIjoiZDhkMTI2YzE5Y2ZkOTg2MTYxZjhkYWU5ZDE3Y2FmMDc4NjQxNTE4ZiJ9.U6Q_Rb10VX8lUhSJSH3otaiuTBdNR1GbI8_KKVQ9oLH8eVGs0lvhn761eC5vaxdx1WXc_1VYLrCCfQEhI5T-LJAnzhXnuEiJvcW8Ry5quaBdhlkZV-eFSEIo3PVm7qQ5R_uPUBOxjIX-QLUiFviXiUfCc3rSDyFV_OIsBwa8Y8HxUcUpf4k7pmcfxB4PF3VxhTFCDeSwbtuj3tu9kGup5XmSgQKz6gB_aQecP2Zw9zmb7e0lfhtE-jU91B9ZBjAS1iaw-j3-hWsU3c701QHilxsd3MDEYg-fbbb92Cal3BnycKg4w3gU7qeuK7lpSrpfsojNDzXZLo1t8Sqd1YpA-g",
+    "session_state": {
+      "extraQueryParams": {
+        "authuser": "0"
+      }
+    },
+    "first_issued_at": 1630890668151,
+    "expires_at": 1630894267151,
+    "idpId": "google"
+  },
+  "tokenId": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk5MWIwNjM2YWFkYTM0MWM1YTA4ZTBkOGYyNDA2OTcyMDY0ZGM4ZWQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNDY0MjIwMDQxMDMtbmo0aDYza21rYjl0cWJhNm4xZHZ2aWNhZDM1ZDhvNTcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI0NjQyMjAwNDEwMy1uajRoNjNrbWtiOXRxYmE2bjFkdnZpY2FkMzVkOG81Ny5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExODAzMTg2MDcyMDc5MTE4MTQ0NiIsImVtYWlsIjoidmluaWxpbWEwN0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IlN4VC11Z2Q2a3JTaXZjaVI5Zk1rNnciLCJuYW1lIjoiVmluw61jaXVzIEYuIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdncWtHV01Zc09XdC1lcm1zUGhsQjFkN2RlSVBwR2FmVTRiUmJSQT1zOTYtYyIsImdpdmVuX25hbWUiOiJWaW7DrWNpdXMiLCJmYW1pbHlfbmFtZSI6IkYuIiwibG9jYWxlIjoicHQtQlIiLCJpYXQiOjE2MzA4OTA2NjYsImV4cCI6MTYzMDg5NDI2NiwianRpIjoiZDhkMTI2YzE5Y2ZkOTg2MTYxZjhkYWU5ZDE3Y2FmMDc4NjQxNTE4ZiJ9.U6Q_Rb10VX8lUhSJSH3otaiuTBdNR1GbI8_KKVQ9oLH8eVGs0lvhn761eC5vaxdx1WXc_1VYLrCCfQEhI5T-LJAnzhXnuEiJvcW8Ry5quaBdhlkZV-eFSEIo3PVm7qQ5R_uPUBOxjIX-QLUiFviXiUfCc3rSDyFV_OIsBwa8Y8HxUcUpf4k7pmcfxB4PF3VxhTFCDeSwbtuj3tu9kGup5XmSgQKz6gB_aQecP2Zw9zmb7e0lfhtE-jU91B9ZBjAS1iaw-j3-hWsU3c701QHilxsd3MDEYg-fbbb92Cal3BnycKg4w3gU7qeuK7lpSrpfsojNDzXZLo1t8Sqd1YpA-g",
+  "accessToken": "ya29.a0ARrdaM-1uCEu4cD18a9FtqGWuMUfacpimYG9l0Vdn525OJTdzlBau9Dlf_uLI2i3TvxvEWD9Da6eg121s45R-3v-TaRgFKOR4dPaimoOOtBLrk_-lRJhkoZ7f8XgpHPooo0LndmV2coil81pbWwgpFDAs9vy",
+  "profileObj": {
+    "googleId": "118031860720791181446",
+    "imageUrl": "https://lh3.googleusercontent.com/a-/AOh14GgqkGWMYsOWt-ermsPhlB1d7deIPpGafU4bRbRA=s96-c",
+    "email": "vinilima07@gmail.com",
+    "name": "Vinícius F.",
+    "givenName": "Vinícius",
+    "familyName": "F."
+  }
+}

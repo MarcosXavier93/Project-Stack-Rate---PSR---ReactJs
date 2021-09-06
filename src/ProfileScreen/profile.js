@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
+import { SessionContext, getSession } from "../session";
 import { grey2, grey3, purple } from "./colors";
 import "./profile.css";
 import { uploadImage } from "./utils";
@@ -31,9 +32,7 @@ export function Dialog({ open, children, header, subheader, actions, size }) {
       <div
         className="profile-modal-data"
         style={{
-          margin: `10% ${
-            size === "md" ? "20%" : size === "lg" ? "10%" : "30%"
-          }`,
+          margin: `10% ${size === "md" ? "20%" : size === "lg" ? "10%" : "30%"}`,
         }}
       >
         <div className="profile-modal-header">{header}</div>
@@ -67,8 +66,8 @@ function IconButton({ onClick, icon, style, children, iconSize }) {
 
 function TextField({ label, value, onChange }) {
   return (
-    <div class="input-container">
-      <input type="text" value={value} onChange={onChange} />
+    <div className="input-container">
+      <input type="text" value={value} onChange={onChange} style={{ color: "#000" }} />
       <label>{label}</label>
     </div>
   );
@@ -76,15 +75,15 @@ function TextField({ label, value, onChange }) {
 
 function TextArea({ label, value, onChange }) {
   return (
-    <div class="input-container">
+    <div className="input-container">
       <textarea
-        style={{ resize: "none" }}
+        style={{ resize: "none", color: "#000" }}
         rows={4}
         type="text-area"
         onChange={onChange}
-      >
-        {value}
-      </textarea>
+        defaultValue=""
+        value={value}
+      />
       <label>{label}</label>
     </div>
   );
@@ -120,13 +119,28 @@ function ProfileAppear({ user }) {
   const onClickAvatarRef = useRef();
   const onClickBackgroundRef = useRef();
 
-  // TODO: update avatar using API
-  const uploadAvatar = (e) =>
-    uploadImage(e?.target?.files?.["0"]).then((data) => setAvatar(data));
+  const uploadAvatar = (e) => {
+    uploadImage(e?.target?.files?.["0"]).then((data) => {
+      setAvatar(data);
+      fetch(`http://localhost:8080/user/${user._id}`, {
+        method: "PUT",
+        body: { avatar: data },
+      })
+        .then((response) => response?.json())
+        .catch((err) => console.log(err));
+    });
+  };
 
-  // TODO: update avatar using API
   const uploadBackground = (e) =>
-    uploadImage(e?.target?.files?.["0"]).then((data) => setBackground(data));
+    uploadImage(e?.target?.files?.["0"]).then((data) => {
+      setBackground(data);
+      fetch(`http://localhost:8080/user/${user._id}`, {
+        method: "PUT",
+        body: { background: data },
+      })
+        .then((response) => response?.json())
+        .catch((err) => console.log(err));
+    });
 
   return (
     <section style={{ marginBottom: 32, position: "relative", paddingTop: 32 }}>
@@ -136,11 +150,8 @@ function ProfileAppear({ user }) {
           alt="background profile avatar"
           style={{ backgroundImage: `url(${background || "default-bg.jpg"})` }}
         >
-          <div id="profile-edit-profile-bg">
-            <IconButton
-              icon="edit"
-              onClick={() => onClickBackgroundRef.current.click()}
-            >
+          <div id="edit-profile-bg">
+            <IconButton icon="edit" onClick={() => onClickBackgroundRef.current.click()}>
               <input
                 ref={onClickBackgroundRef}
                 onChange={uploadBackground}
@@ -155,17 +166,9 @@ function ProfileAppear({ user }) {
         id="profile-avatar"
         style={{ backgroundImage: `url(${avatar || "default-avatar.png"})` }}
       >
-        <div id="profile-edit-profile-avatar">
-          <IconButton
-            icon="edit"
-            onClick={() => onClickAvatarRef.current.click()}
-          >
-            <input
-              ref={onClickAvatarRef}
-              onChange={uploadAvatar}
-              type="file"
-              hidden
-            />
+        <div id="edit-profile-avatar">
+          <IconButton icon="edit" onClick={() => onClickAvatarRef.current.click()}>
+            <input ref={onClickAvatarRef} onChange={uploadAvatar} type="file" hidden />
           </IconButton>
         </div>
       </Card>
@@ -178,9 +181,14 @@ function ProfileSettings({ user }) {
   const [name, setName] = useState(user.name);
   const [description, setDescription] = useState(user.description);
 
-  // TODO: fetch new user information
   const saveSetting = () => {
-    setOpenSettings(false);
+    fetch(`http://localhost:8080/user/${user._id}`, {
+      method: "PUT",
+      body: { name, description },
+    })
+      .then((response) => response?.json())
+      .catch((err) => console.log(err))
+      .finally(() => setOpenSettings(false));
   };
 
   return (
@@ -233,7 +241,6 @@ function SearchAnimes() {
   const [animes, setAnimes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  /// TODO change to consume our API
   useEffect(() => {
     setLoading(true);
     fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
@@ -335,8 +342,7 @@ function ProfileActions({ user }) {
       </div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         <SearchAnimes />
-        {/* TODO: GO TO SAMUEL PAGE */}
-        <Button onClick={() => {}} text={"my anime list"} icon={"list"} />
+        <Button text={"my anime list"} icon={"list"} />
       </div>
     </div>
   );
@@ -361,14 +367,8 @@ function ProfileFooter({ user }) {
 }
 
 export default function Profile() {
-  const user = {
-    id: "1e1e1e1e1e",
-    name: "Excepteur do Cupidatat",
-    description:
-      "Commodo do laborum tempor nostrud cillum irure labore consectetur elit duis eiusmod eu. Proident Lorem laborum nisi non deserunt ipsum reprehenderit ut et velit cillum. Excepteur cupidatat esse irure tempor tempor enim elit magna minim. In dolor officia do nisi sint voluptate dolore. Incididunt magna consequat tempor sit occaecat aliqua pariatur in ex et fugiat ut officia tempor. Laboris sint est do et elit. Eu ullamco officia anim ullamco.",
-    background: null,
-    avatar: null,
-  };
+  const { user } = useContext(SessionContext);
+  console.log("Profile page with user", user);
 
   return (
     <main id="profile-main">

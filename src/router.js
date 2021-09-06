@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { SessionContext, getSession } from "./session";
 import "./Styles/global.css";
 import Profile from "./ProfileScreen/profile";
 import Anime from "./DetailScreen/anime";
@@ -9,42 +10,31 @@ import Header from "./Components/Header";
 import Login from "./LoginScreen/loginScreen";
 import RegisterScreen from "./LoginScreen/RegisterScreen/registerScreen";
 import RecoveryPasswordScreen from "./LoginScreen/RecoveryPasswordScreen/recoveryPasswordScreen";
-import { BrowserRouter as BRouter, Switch, Route } from "react-router-dom";
-import { SessionContext } from "./session";
+import { BrowserRouter as BRouter, Switch, Route, Redirect } from "react-router-dom";
 
-function ProtectedRoute({ component, ...props }) {
-  const { isAuthenticated } = useContext(SessionContext);
+function ProtectedRoute({ component: Component, ...props }) {
+  const { user } = useContext(SessionContext);
 
-  return (
-    <Route {...props}>
-      {isAuthenticated ? <Component {...props} /> : <Redirect to="/login" />}
-    </Route>
-  );
+  return <Route {...props}>{user ? <Component /> : <Redirect to="/login" />}</Route>;
 }
 
 export default function Router() {
-  const [isAuthenticated, setAuthenticated] = useState(getSession);
+  const [user, setUser] = useState(null);
 
   return (
-    <SessionContext.Provider value={{ isAuthenticated, user, setAuthenticated }}>
+    <SessionContext.Provider value={{ user, setUser }}>
       <BRouter>
         <Header />
         <Switch>
           <Route exact path="/login">
             <Login />
           </Route>
-          <ProtectedRoute exact path="/">
+          <Route exact path="/">
             <Home />
-          </ProtectedRoute>
-          <ProtectedRoute exact path="/anime/:id">
-            <Anime />
-          </ProtectedRoute>
-          <ProtectedRoute exact path="/profile">
-            <Profile />
-          </ProtectedRoute>
-          <ProtectedRoute exact path="/my-anime-list">
-            <MyAnimeList />
-          </ProtectedRoute>
+          </Route>
+          <ProtectedRoute exact path="/anime/:id" component={Anime} />
+          <ProtectedRoute exact path="/profile" component={Profile} />
+          <ProtectedRoute exact path="/my-anime-list" component={MyAnimeList} />
           <Route exact path="/RecoveryPasswordScreen">
             <RecoveryPasswordScreen />
           </Route>

@@ -22,7 +22,7 @@ export default function Router() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/anime">
+        <Route exact path="/anime/:id">
           <Anime />
         </Route>
         <Route exact path="/profile">

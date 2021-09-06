@@ -22,7 +22,7 @@ export function Header() {
             <Link to="/my-anime-list">my anime list</Link>
           </li>
           <li>
-            <Link to="/anime">anime</Link>
+            <Link to="/anime/1">anime</Link>
           </li>
         </ul>
       </nav>
